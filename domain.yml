@@ -22,8 +22,23 @@ responses:
 
   utter_did_that_help:
     - text: "Did that help you?"
+      buttons:
+        - title: 'Yes'
+          payload: '/affirm'
+        - title: 'No'
+          payload: '/deny'
     - text: "Does that answer your question?"
+      buttons:
+        - title: 'Yes'
+          payload: '/affirm'
+        - title: 'No'
+          payload: '/deny'
     - text: "Did I answer your question with that?"
+      buttons:
+        - title: 'Yes'
+          payload: '/affirm'
+        - title: 'No'
+          payload: '/deny'
 
   utter_handover:
     - text: "Just a moment. I'm going to ask a colleague from AH customer service to assist you"
@@ -46,6 +61,11 @@ responses:
 
   utter_did_you_buy_it_in_a_store:
     - text: "I'm sorry to hear that. Did you buy it in one our stores?"
+      buttons:
+        - title: 'Yes'
+          payload: '/affirm'
+        - title: 'No'
+          payload: '/deny'
 
   utter_go_to_service_desk_in_store:
     - text: "Please take your receipt to the service desk in the store, so my colleague can see what went wrong."
