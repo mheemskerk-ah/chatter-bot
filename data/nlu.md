@@ -84,3 +84,39 @@
 - that does not make sense
 - that's not helpful
 
+## intent:check_refund_status
+- When will I get my money back?
+- How will my complaint be settled?
+- How is the complaint about our online order refunded?
+- When will I get a refund?
+- What about the refund for my [coffee](product)?
+- Will I still get my damaged packs of [coffee](product) back?
+- Where can I find the compensation of my complaint?
+- Where can we find the settlement?
+- How will you arrange the refund?
+- I'd like a refund for my missing products?
+- Can you refund the items that haven't been delivered?
+
+## intent:ask_how_to_return_items_with_deposit        
+- How do I return a [crate](deposit_item)?
+- I'd like to return my [blue crates](deposit_item)
+- I want to hand in my [crates](deposit_item)
+- I want to get my deposit back
+- I still have a number [empty crate](deposit_item) that I'd like to return
+- How about my deposit?
+- I want get my deposit back
+- Where can I return empty beer [crates](deposit_item)?
+- Can I return [empty bottles](deposit_item) with the delivery guy?
+- Can I return a deposit with the delivery guy?
+- How does it work with a deposit for a [crate](deposit_item)?
+- Are returnable [bottles](deposit_item) taken by the deliverer?
+
+## intent: inform
+- [August 31st]{"entity": "refund_amount", "value": "€ 6,45"}
+- [31 August]{"entity": "refund_amount", "value": "€ 6,45"}
+- [31 Aug]{"entity": "refund_amount", "value": "€ 6,45"}
+- [Aug 31]{"entity": "refund_amount", "value": "€ 6,45"}
+- [September 6th]{"entity": "refund_amount", "value": "€ 4,00"}
+- [September 6]{"entity": "refund_amount", "value": "€ 4,00"}
+- [6 September]{"entity": "refund_amount", "value": "€ 4,00"}
+- [6 Sept]{"entity": "refund_amount", "value": "€ 4,00"}

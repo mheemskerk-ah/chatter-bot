@@ -42,3 +42,16 @@
 > handover
   - utter_handover
   - utter_goodbye
+
+## check-refund-status
+* check_refund_status
+  - utter_pick_order_with_refund
+* inform{"refund_amount": "some amount"}
+  - utter_inform_about_refund
+> standard_reprompt
+
+## deposit items
+* ask_how_to_return_items_with_deposit
+  - utter_instructions_deposit_items
+> standard_reprompt
+

@@ -5,10 +5,20 @@ intents:
   - deny
   - bot_challenge
   - complain_about_discount
+  - ask_how_to_return_items_with_deposit
+  - inform
+  - check_refund_status
+
+slots:
+  refund_amount:
+    type: unfeaturized
 
 entities:
   - discount
   - organization
+  - product
+  - deposit_item
+  - refund_amount
 
 responses:
   utter_introduction_greet:
@@ -69,6 +79,20 @@ responses:
 
   utter_go_to_service_desk_in_store:
     - text: "Please take your receipt to the service desk in the store, so my colleague can see what went wrong."
+
+  utter_pick_order_with_refund:
+    - text: "Which order are you referring to?"
+      buttons:
+        - title: 'August 31st'
+          payload: '/inform{"refund_amount": "€ 6,45"}'
+        - title: 'September 6th'
+          payload: '/inform{"refund_amount": "€ 4,00"}'
+
+  utter_inform_about_refund:
+    - text: "Sorry that your previous order went wrong. We will therefore refund {refund_amount} with your next order. You will also find this in [Mijn bestellingen](https://www.ah.nl/mb) and on the invoice of your next order"
+
+  utter_instructions_deposit_items:
+    - text: "You can return your blue crates, as well as your empty returnable bottles and beer creates, with your next order or pick-up. The refund of the deposit is not stated on the included receipt, but appear on your [online invoice](https://www.ah.nl/facturen) after 1 to 2 days. Or you can return your crates at any AH store with an [ah.nl Service Point](https://www.ah.nl/winkels)."
 
 session_config:
   session_expiration_time: 60
