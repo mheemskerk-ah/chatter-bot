@@ -3,29 +3,52 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+  - complain_about_discount
+
+entities:
+  - discount
+  - organization
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_introduction_greet:
+    - text: "Good morning, I'm the AH customer service digital assistant"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_introduction_instructions:
+    - text: "I can help you with questions about our stores or your online order. Or I can forward your question to my colleague from AH customer service."
+
+  utter_introduction_how_can_i_help:
+    - text: "How can I help you? Please keep your questions concise and to the point; it'll help me understand you better."
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
+    - text: "Does that answer your question?"
+    - text: "Did I answer your question with that?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_handover:
+    - text: "Just a moment. I'm going to ask a colleague from AH customer service to assist you"
+
+  utter_sorry_cannot_help:
+    - text: "I'm sorry, I can't help you with that!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
+    - text: "Talk to you later"
+    - text: "Have a great day"
+
+  utter_great_that_it_helped:
+    - text: "Great"
+    - text: "Awesome. If you have more questions, you know where to find me"
+    - text: "Glad I could help"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
+
+  utter_did_you_buy_it_in_a_store:
+    - text: "I'm sorry to hear that. Did you buy it in one our stores?"
+
+  utter_go_to_service_desk_in_store:
+    - text: "Please take your receipt to the service desk in the store, so my colleague can see what went wrong."
 
 session_config:
   session_expiration_time: 60
